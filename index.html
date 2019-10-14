@@ -1,20 +1,22 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <title>JS Drum Kit</title>
-  <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Heroes Evolved - Auto Chess combos builder tool</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css?v=0.004">
 </head>
 
 <body>
 
-
   <div class="container">
-    <!-- 
-    12 Teams
-    10 Classes
 
+    <!-- 
+    Sorting Features need to implement
     <select>
       <option>All Teams</option>
       <option>Eastern Lore</option>
@@ -45,20 +47,17 @@
       <option>Inventor</option>
     </select> -->
 
+    <section class="two-col heroes-selection-area noselect">
 
-    <section class="heroes-selection-area">
 
-      <div id="heroesSelected" class="heroes-area heroes-selected">
-      </div>
-
-      <div id="heroesSelecting" class="heroes-area heroes-selecting">
+      <div id="heroesSelecting" class="col col-1 heroes-area heroes-area-selecting">
+        <h3 class="mt-0 mb-3">Heroes Selection</h3>
 
         <div class="hero" data-team="eastern-lore" data-class="tank">
           <div class="hero-name quality"><span class="quality-1">Raker</span></div>
           <div class="hero-team">EASTERN LORE</div>
           <div class="hero-class">Tank</div>
           <div class="hero-price">1</div>
-          <div class="action">+</div>
         </div>
 
         <div class="hero" data-team="eastern-lore" data-class="assassin">
@@ -66,7 +65,6 @@
           <div class="hero-team">EASTERN LORE</div>
           <div class="hero-class">Assassin</div>
           <div class="hero-price">2</div>
-          <div class="action">+</div>
         </div>
 
         <div class="hero" data-team="eastern-lore" data-class="fighter">
@@ -74,7 +72,6 @@
           <div class="hero-team">EASTERN LORE</div>
           <div class="hero-class">Fighter</div>
           <div class="hero-price">4</div>
-          <div class="action">+</div>
         </div>
 
         <div class="hero" data-team="eastern-lore" data-class="cleric">
@@ -446,164 +443,176 @@
         </div>
 
       </div>
+
+      <div id="heroesSelected" class="col col-2 heroes-area heroes-area-selected">
+        <h3 class="mt-0 mb-3">Selected Heroes (max 8 allowed) </h3>
+
+      </div>
+
     </section>
 
 
-    <section class="combo-gallery">
-      <div class="active-team-buff">
-        <h3>Buff Team</h3>
+    <section class="two-col combo-gallery">
+      <div class="col col-1 active-team-buff">
+        <h3 class="mt-0">Buff Team</h3>
         <div class="selected-heroes-buff selected-heroes-buff-team"></div>
 
-        <h3>Buff Class</h3>
+        <h3 class="mb-3">Buff Class</h3>
         <div class="selected-heroes-buff selected-heroes-buff-class"></div>
       </div>
 
-      <div class="combo-container">
+      <div class="col col-2 all-buff-list">
 
-        <div class="combo-team">
-          <h3>Team</h3>
+        <h3 class="mb-0">Reference list of all buffs</h3>
 
-          <div class="buff buff-attack" data-buff="team" data-buff-type="attack" data-buff-all>
-            <div class="buff-team"><span>EASTERN LORE</span></div>
-            <div class="buff-description">2: +15% Attack Damage for all allies</div>
-            <div class="buff-description">4: +15% Attack Damage for all allies</div>
+        <div class="two-col">
+
+          <div class="col col-1 combo-team">
+            <h3>Team</h3>
+
+            <div class="buff buff-attack" data-buff="team" data-buff-type="attack" data-buff-all>
+              <div class="buff-team"><span>EASTERN LORE</span></div>
+              <div class="buff-description">2: +15% Attack Damage for all allies</div>
+              <div class="buff-description">4: +15% Attack Damage for all allies</div>
+            </div>
+
+            <div class="buff buff-attack" data-buff="team" data-buff-type="attack" data-buff-all>
+              <div class="buff-team"><span>LEGENDS OF JAPAN</span></div>
+              <div class="buff-description">2: +25 Attack Speed for all Legend of Japan</div>
+              <div class="buff-description">4: +25 Attack Speed for all allies</div>
+            </div>
+
+            <div class="buff buff-attack" data-buff="team" data-buff-type="attack">
+              <div class="buff-team"><span>BERSERK</span></div>
+              <div class="buff-description">2: Deal 20 damage per second</div>
+              <div class="buff-description">4: Deal 20 damage per second</div>
+            </div>
+
+            <div class="buff buff-attack" data-buff="team" data-buff-type="attack" data-buff-all>
+              <div class="buff-team"><span>HEROIC LEGENDS</span></div>
+              <div class="buff-description">2: -5 Armor to all enemy</div>
+              <div class="buff-description">4: -7 Armor to all enemy</div>
+            </div>
+
+
+            <div class="buff buff-defend" data-buff="team" data-buff-type="defend">
+              <div class="buff-team"><span>ELF KINGDOM</span></div>
+              <div class="buff-description">2: 30% Dodge attacks</div>
+              <div class="buff-description">4: 30% Dodge attacks</div>
+            </div>
+
+            <div class="buff buff-defend" data-buff="team" data-buff-type="defend">
+              <div class="buff-team"><span>ALIEN MONSTER</span></div>
+              <div class="buff-description">2: +300 Max health</div>
+              <div class="buff-description">4: +500 Max health</div>
+            </div>
+
+            <div class="buff buff-defend" data-buff="team" data-buff-type="defend" data-buff-all>
+              <div class="buff-team"><span>GALATIC FANTASY</span></div>
+              <div class="buff-description">2: +20 Spell Resist for all allies</div>
+              <div class="buff-description">4: +30 Spell Resist for all allies</div>
+            </div>
+
+            <div class="buff buff-defend" data-buff="team" data-buff-type="defend" data-buff-all>
+              <div class="buff-team"><span>MECH LIFE</span></div>
+              <div class="buff-description">2: +15 Armor and +10 Health Rege for a random ally</div>
+              <div class="buff-description">6: +15 Armor and +10 Health Rege for all allies</div>
+            </div>
+
+
+            <div class="buff buff-effect" data-buff="team" data-buff-type="effect">
+              <div class="buff-team"><span>WESTERN LORE</span></div>
+              <div class="buff-description">2: 20% Chance to Silence for 4 seconds</div>
+              <div class="buff-description">4: 20% Chance to Silence for 4 seconds</div>
+              <div class="buff-description">6: 20% Chance to Silence for 4 seconds</div>
+            </div>
+
+            <div class="buff buff-effect" data-buff="team" data-buff-type="effect">
+              <div class="buff-team"><span>RENOWNED WARRIORS</span></div>
+              <div class="buff-description">2: 10% Chance to stun for 2 seconds</div>
+              <div class="buff-description">4: 10% Chance to stun for 2 seconds</div>
+            </div>
+
+            <div class="buff buff-effect" data-buff="team" data-buff-type="effect">
+              <div class="buff-team"><span>FUTURE FIGHTERS</span></div>
+              <div class="buff-description">2: +30% Skill CD</div>
+              <div class="buff-description">4: +30% Skill CD</div>
+            </div>
+
+            <div class="buff buff-effect" data-buff="team" data-buff-type="effect">
+              <div class="buff-team"><span>DIVINE CREATURES</span></div>
+              <div class="buff-description">2: 30% Chance to stun enemy for 4 seconds</div>
+              <div class="buff-description">4: 30% Chance to stun enemy for 4 seconds</div>
+            </div>
+
           </div>
 
-          <div class="buff buff-attack" data-buff="team" data-buff-type="attack" data-buff-all>
-            <div class="buff-team"><span>LEGENDS OF JAPAN</span></div>
-            <div class="buff-description">2: +25 Attack Speed for all Legend of Japan</div>
-            <div class="buff-description">4: +25 Attack Speed for all allies</div>
+          <div class="col col-2 combo-class">
+            <h3>Class</h3>
+
+            <div class="buff buff-attack" data-buff="class" data-buff-type="attack">
+              <div class="buff-class"><span>Cleric</span></div>
+              <div class="buff-description">1: +30% skill damage for one deity on scene</div>
+            </div>
+
+            <div class="buff buff-attack" data-buff="class" data-buff-type="attack">
+              <div class="buff-class"><span>Archer</span></div>
+              <div class="buff-description">2: +30% Attack Damage for archers</div>
+              <div class="buff-description">4: Archer's Attack Damage +30%</div>
+            </div>
+
+            <div class="buff buff-attack" data-buff="class" data-buff-type="attack">
+              <div class="buff-class"><span>Swordfighter</span></div>
+              <div class="buff-description">2: 50% damage ignores armor</div>
+              <div class="buff-description">4: 50% damage ignores armor</div>
+            </div>
+
+            <div class="buff buff-attack" data-buff="class" data-buff-type="attack">
+              <div class="buff-class"><span>Assassin</span></div>
+              <div class="buff-description">3: 12% Chance for 3x damage</div>
+              <div class="buff-description">6: 12% Chance for 4x damage</div>
+            </div>
+
+
+            <div class="buff buff-defend" data-buff="class" data-buff-type="defend">
+              <div class="buff-class"><span>Tank</span></div>
+              <div class="buff-description">2: Damage reduction shield after taking 1 attacks</div>
+              <div class="buff-description">4: Damage reduction shield after taking 1 attacks</div>
+              <div class="buff-description">6: Damage reduction shield after taking 1 attacks</div>
+            </div>
+
+            <div class="buff buff-defend" data-buff="class" data-buff-type="defend">
+              <div class="buff-class"><span>Dancer</span></div>
+              <div class="buff-description">2: -15% Attack Speed for one enemy</div>
+              <div class="buff-description">4: -15% Attack Speed for one enemy</div>
+            </div>
+
+            <div class="buff buff-defend" data-buff="class" data-buff-type="defend">
+              <div class="buff-class"><span>Fighter</span></div>
+              <div class="buff-description">3: +5 Armor</div>
+              <div class="buff-description">6: +7 Armor</div>
+            </div>
+
+
+            <div class="buff buff-effect" data-buff="class" data-buff-type="effect">
+              <div class="buff-class"><span>Inventor</span></div>
+              <div class="buff-description">2: Two 1-star merge to become 2-star</div>
+              <div class="buff-description">4: Two 2-star merge to become 3-star</div>
+            </div>
+
+            <div class="buff buff-effect" data-buff="class" data-buff-type="effect">
+              <div class="buff-class"><span>Mage</span></div>
+              <div class="buff-description">3: Reduce spell resist and deal 40 magic damage</div>
+              <div class="buff-description">6: Reduce spell resist and deal 40 magic damage</div>
+            </div>
+
+            <div class="buff buff-effect" data-buff="class" data-buff-type="effect">
+              <div class="buff-class"><span>Warlock</span></div>
+              <div class="buff-description">3: 20% Life Steal</div>
+              <div class="buff-description">6: 30% Life Steal</div>
+            </div>
           </div>
 
-          <div class="buff buff-attack" data-buff="team" data-buff-type="attack">
-            <div class="buff-team"><span>BERSERK</span></div>
-            <div class="buff-description">2: Deal 20 damage per second</div>
-            <div class="buff-description">4: Deal 20 damage per second</div>
-          </div>
-
-          <div class="buff buff-attack" data-buff="team" data-buff-type="attack" data-buff-all>
-            <div class="buff-team"><span>HEROIC LEGENDS</span></div>
-            <div class="buff-description">2: -5 Armor to all enemy</div>
-            <div class="buff-description">4: -7 Armor to all enemy</div>
-          </div>
-
-
-          <div class="buff buff-defend" data-buff="team" data-buff-type="defend">
-            <div class="buff-team"><span>ELF KINGDOM</span></div>
-            <div class="buff-description">2: 30% Dodge attacks</div>
-            <div class="buff-description">4: 30% Dodge attacks</div>
-          </div>
-
-          <div class="buff buff-defend" data-buff="team" data-buff-type="defend">
-            <div class="buff-team"><span>ALIEN MONSTER</span></div>
-            <div class="buff-description">2: +300 Max health</div>
-            <div class="buff-description">4: +500 Max health</div>
-          </div>
-
-          <div class="buff buff-defend" data-buff="team" data-buff-type="defend" data-buff-all>
-            <div class="buff-team"><span>GALATIC FANTASY</span></div>
-            <div class="buff-description">2: +20 Spell Resist for all allies</div>
-            <div class="buff-description">4: +30 Spell Resist for all allies</div>
-          </div>
-
-          <div class="buff buff-defend" data-buff="team" data-buff-type="defend" data-buff-all>
-            <div class="buff-team"><span>MECH LIFE</span></div>
-            <div class="buff-description">2: +15 Armor and +10 Health Rege for a random ally</div>
-            <div class="buff-description">6: +15 Armor and +10 Health Rege for all allies</div>
-          </div>
-
-
-          <div class="buff buff-effect" data-buff="team" data-buff-type="effect">
-            <div class="buff-team"><span>WESTERN LORE</span></div>
-            <div class="buff-description">2: 20% Chance to Silence for 4 seconds</div>
-            <div class="buff-description">4: 20% Chance to Silence for 4 seconds</div>
-            <div class="buff-description">6: 20% Chance to Silence for 4 seconds</div>
-          </div>
-
-          <div class="buff buff-effect" data-buff="team" data-buff-type="effect">
-            <div class="buff-team"><span>RENOWNED WARRIORS</span></div>
-            <div class="buff-description">2: 10% Chance to stun for 2 seconds</div>
-            <div class="buff-description">4: 10% Chance to stun for 2 seconds</div>
-          </div>
-
-          <div class="buff buff-effect" data-buff="team" data-buff-type="effect">
-            <div class="buff-team"><span>FUTURE FIGHTERS</span></div>
-            <div class="buff-description">2: +30% Skill CD</div>
-            <div class="buff-description">4: +30% Skill CD</div>
-          </div>
-
-          <div class="buff buff-effect" data-buff="team" data-buff-type="effect">
-            <div class="buff-team"><span>DIVINE CREATURES</span></div>
-            <div class="buff-description">2: 30% Chance to stun enemy for 4 seconds</div>
-            <div class="buff-description">4: 30% Chance to stun enemy for 4 seconds</div>
-          </div>
-
-        </div>
-
-        <div class="combo-class">
-          <h3>Class</h3>
-
-          <div class="buff buff-attack" data-buff="class" data-buff-type="attack">
-            <div class="buff-class"><span>Cleric</span></div>
-            <div class="buff-description">1: +30% skill damage for one deity on scene</div>
-          </div>
-
-          <div class="buff buff-attack" data-buff="class" data-buff-type="attack">
-            <div class="buff-class"><span>Archer</span></div>
-            <div class="buff-description">2: +30% Attack Damage for archers</div>
-            <div class="buff-description">4: Archer's Attack Damage +30%</div>
-          </div>
-
-          <div class="buff buff-attack" data-buff="class" data-buff-type="attack">
-            <div class="buff-class"><span>Swordfighter</span></div>
-            <div class="buff-description">2: 50% damage ignores armor</div>
-            <div class="buff-description">4: 50% damage ignores armor</div>
-          </div>
-
-          <div class="buff buff-attack" data-buff="class" data-buff-type="attack">
-            <div class="buff-class"><span>Assassin</span></div>
-            <div class="buff-description">3: 12% Chance for 3x damage</div>
-            <div class="buff-description">6: 12% Chance for 4x damage</div>
-          </div>
-
-
-          <div class="buff buff-defend" data-buff="class" data-buff-type="defend">
-            <div class="buff-class"><span>Tank</span></div>
-            <div class="buff-description">2: Damage reduction shield after taking 1 attacks</div>
-            <div class="buff-description">4: Damage reduction shield after taking 1 attacks</div>
-            <div class="buff-description">6: Damage reduction shield after taking 1 attacks</div>
-          </div>
-
-          <div class="buff buff-defend" data-buff="class" data-buff-type="defend">
-            <div class="buff-class"><span>Dancer</span></div>
-            <div class="buff-description">2: -15% Attack Speed for one enemy</div>
-            <div class="buff-description">4: -15% Attack Speed for one enemy</div>
-          </div>
-
-          <div class="buff buff-defend" data-buff="class" data-buff-type="defend">
-            <div class="buff-class"><span>Fighter</span></div>
-            <div class="buff-description">3: +5 Armor</div>
-            <div class="buff-description">6: +7 Armor</div>
-          </div>
-
-
-          <div class="buff buff-effect" data-buff="class" data-buff-type="effect">
-            <div class="buff-class"><span>Inventor</span></div>
-            <div class="buff-description">2: Two 1-star merge to become 2-star</div>
-            <div class="buff-description">4: Two 2-star merge to become 3-star</div>
-          </div>
-
-          <div class="buff buff-effect" data-buff="class" data-buff-type="effect">
-            <div class="buff-class"><span>Mage</span></div>
-            <div class="buff-description">3: Reduce spell resist and deal 40 magic damage</div>
-            <div class="buff-description">6: Reduce spell resist and deal 40 magic damage</div>
-          </div>
-
-          <div class="buff buff-effect" data-buff="class" data-buff-type="effect">
-            <div class="buff-class"><span>Warlock</span></div>
-            <div class="buff-description">3: 20% Life Steal</div>
-            <div class="buff-description">6: 30% Life Steal</div>
-          </div>
         </div>
       </div>
 
@@ -645,44 +654,9 @@
       const dancer = heroesSelected.querySelectorAll('.hero[data-class="dancer"]');
       const inventor = heroesSelected.querySelectorAll('.hero[data-class="inventor"]');
 
-      console.clear();
-      // console.log(
-      //   'Total Teams \n' +
-      //   'Berserk: ' + berserk.length + '\n' +
-      //   'Eastern Lore: ' + easternLore.length + '\n\n' +
-
-      //   'Total Classes \n' +
-      //   'Fighter: ' + fighter.length + '\n' +
-      //   'Assassin: ' + assassin.length + '\n' +
-      //   'Warlock: ' + warlock.length + '\n' +
-      //   'Tank: ' + tank.length + '\n' +
-      //   'Cleric: ' + cleric.length + '\n' +
-      //   'Inventor: ' + inventor.length + '\n\n'
-      // );
-
       var
-        buffTeam1 = '',
-        buffTeam2 = '',
-        buffTeam3 = '',
-        buffTeam4 = '',
-        buffTeam5 = '',
-        buffTeam6 = '',
-        buffTeam7 = '',
-        buffTeam8 = '',
-        buffTeam9 = '',
-        buffTeam10 = '',
-        buffTeam11 = '',
-        buffTeam12 = '',
-        buffClass1 = '',
-        buffClass2 = '',
-        buffClass3 = '',
-        buffClass4 = '',
-        buffClass5 = '',
-        buffClass6 = '',
-        buffClass7 = '',
-        buffClass8 = '',
-        buffClass9 = '',
-        buffClass10 = '';
+        buffTeam1 = '', buffTeam2 = '', buffTeam3 = '', buffTeam4 = '', buffTeam5 = '', buffTeam6 = '', buffTeam7 = '', buffTeam8 = '', buffTeam9 = '', buffTeam10 = '', buffTeam11 = '', buffTeam12 = '',
+        buffClass1 = '', buffClass2 = '', buffClass3 = '', buffClass4 = '', buffClass5 = '', buffClass6 = '', buffClass7 = '', buffClass8 = '', buffClass9 = '', buffClass10 = '';
 
       // Buff for Teams
       if (easternLore.length == 4) {
@@ -828,17 +802,13 @@
     const heroesSelecting = document.getElementById('heroesSelecting');
 
     function heroClicked(e) {
-      const totalHeroesSelected = heroesSelected.querySelectorAll('.action');
+      const totalHeroesSelected = heroesSelected.querySelectorAll('.hero');
 
-
-      if (this === e.target) {
-        if (e.target.parentNode.id == 'heroesSelected') {
-          heroesSelecting.appendChild(e.target);
-        } else {
-
-          if (totalHeroesSelected.length == 8) return;
-          heroesSelected.appendChild(e.target);
-        }
+      if (e.target.parentNode.id == 'heroesSelecting' || e.target.parentNode.parentNode.id == 'heroesSelecting') {
+        if (totalHeroesSelected.length == 8) return;
+        heroesSelected.appendChild(this);
+      } else {
+        heroesSelecting.appendChild(this);
       }
 
       heroesBuff();
@@ -848,8 +818,6 @@
     allHeroes.forEach(function (e) {
       e.addEventListener("click", heroClicked);
     });
-
-
 
   </script>
 

@@ -2,89 +2,86 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+.noselect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+.mt-0 {
+  margin-top: 0; }
+
+.mb-0 {
+  margin-bottom: 0; }
+
+.mb-3 {
+  margin-bottom: 3px; }
+
+h1, h2, h3 {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 500; }
+
 body {
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 14px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 13px;
   color: white;
   background-color: #004072; }
 
 .container {
-  width: 1400px;
-  margin: 20px auto 0; }
+  margin: 10px 10px 0; }
 
-.table {
-  border: 1px solid #ccc;
-  margin: 20px 0;
-  border-collapse: collapse;
-  min-width: 600px; }
-  .table th, .table td {
-    border: 1px solid #ccc;
-    padding: 5px 10px; }
-
-.help {
+.two-col {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 140px;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin-bottom: 10px; }
-
-.heroes-selection-area {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between; }
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin: 0 0 10px; }
+  .two-col .col {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+  .two-col .col-1 {
+    margin-bottom: 10px; }
 
 .heroes-area {
-  padding: 10px;
-  -webkit-box-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-  max-height: 350px;
-  overflow: auto; }
-
-.heroes-selected {
-  border: 2px solid #82dd50;
-  margin-right: 20px;
-  height: 350px; }
-
-.heroes-selecting {
-  border: 2px solid #469cff;
-  margin-left: 20px; }
+  padding: 5px 10px 0;
+  overflow: auto;
+  border: 2px solid transparent; }
+  .heroes-area-selected {
+    border-color: #82dd50;
+    max-height: 140px; }
+  .heroes-area-selecting {
+    border-color: #46e1ff;
+    max-height: 195px; }
 
 .hero {
   border: 1px solid #437aa0;
-  margin: 0 0 10px;
-  padding: 6px 12px;
+  margin: 0 0 4px;
+  padding: 3px 6px;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   cursor: pointer; }
-  .hero:hover {
-    background-color: rgba(0, 0, 0, 0.3); }
   .hero > div {
     -webkit-box-flex: 1;
     -ms-flex: 1;
     flex: 1; }
-  .hero-name {
-    -webkit-box-flex: 2 !important;
-    -ms-flex: 2 !important;
-    flex: 2 !important; }
-  .hero-team {
-    -webkit-box-flex: 2 !important;
-    -ms-flex: 2 !important;
-    flex: 2 !important; }
   .hero-price {
-    text-align: right; }
+    text-align: right;
+    -webkit-box-flex: 0 !important;
+    -ms-flex: 0 !important;
+    flex: 0 !important; }
+
+.active-team-buff {
+  border: 2px solid #fc44ff;
+  padding: 5px 10px;
+  max-height: 270px; }
 
 .quality-1 {
   color: white; }
@@ -102,23 +99,38 @@ body {
   color: #ff7600; }
 
 .buff {
-  margin: 0 0 15px; }
-
-.combo-gallery {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .combo-gallery > div {
-    -webkit-box-flex: 1;
-    -ms-flex: 1;
-    flex: 1; }
-
-.combo-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex; }
-  .combo-container > div {
-    padding: 0 10px; }
+  margin: 0 0 25px; }
 
 .selected-heroes-buff {
   line-height: 1.6; }
+
+@media only screen and (min-width: 1000px) {
+  body {
+    font-size: 14px; }
+  .container {
+    margin: 10px 10px 0; }
+  .two-col {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row; }
+    .two-col .col {
+      -webkit-box-flex: 1;
+      -ms-flex: 1;
+      flex: 1; }
+    .two-col .col-1 {
+      margin-right: 20px; }
+  .heroes-area-selected {
+    height: 310px;
+    max-height: unset; }
+  .heroes-area-selecting {
+    max-height: 310px; }
+  .hero {
+    margin: 0 0 8px;
+    padding: 4px 10px; }
+    .hero:hover {
+      background-color: rgba(0, 0, 0, 0.3); }
+  .active-team-buff {
+    margin-right: 20px; }
+  .all-buff-list {
+    margin-left: 20px; } }
