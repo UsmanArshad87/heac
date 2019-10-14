@@ -1,0 +1,128 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: white;
+  background-color: #004072;
+}
+
+.container {
+  width: 1400px;
+  margin: 20px auto 0;
+}
+
+.table {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  border-collapse: collapse;
+  min-width: 600px;
+
+  th, td {
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+  }
+}
+
+.help {
+  display: flex;
+  width: 140px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+
+.heroes-selection-area {
+  display: flex;
+  justify-content: space-between;
+}
+
+.heroes-area {
+  padding: 10px;
+  flex: 1;
+
+  max-height: 350px;
+  overflow: auto;
+}
+
+.heroes-selected {
+  border: 2px solid #82dd50;
+  margin-right: 20px;
+  height: 350px;
+}
+
+.heroes-selecting {
+  border: 2px solid #469cff;
+  margin-left: 20px;
+}
+
+.hero {
+  border: 1px solid #437aa0;
+  margin: 0 0 10px;
+  padding: 6px 12px;
+  width: 100%;
+  display: flex;
+  cursor: pointer;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  > div {
+    flex: 1;
+  }
+  &-name {
+    flex: 2 !important;
+  }
+  &-team {
+    flex: 2 !important;
+  }
+  &-price {
+    text-align: right;
+  }
+}
+
+.quality {
+  &-1 {
+    color: white;
+  }
+  &-2 {
+    color: #13ffff;
+  }
+  &-3 {
+    color: #ff7afb;
+  }
+  &-4 {
+    color: #ffcb0e;
+  }
+  &-5 {
+    color: #ff7600;
+  }
+}
+
+
+.buff {
+  margin: 0 0 15px;
+}
+
+.combo-gallery {
+  display: flex;
+  > div {
+    flex: 1;
+  }
+}
+
+.combo-container {
+  display: flex;
+  > div {
+    padding: 0 10px;
+  }
+}
+
+.selected-heroes-buff {
+  line-height: 1.6;
+}

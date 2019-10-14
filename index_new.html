@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>JS Drum Kit</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+
+  <div class="container">
+    <!-- 
+    12 Teams
+    10 Classes
+
+    <select>
+      <option>All Teams</option>
+      <option>Eastern Lore</option>
+      <option>Mech Life</option>
+      <option>Elf Kingdom</option>
+      <option>Western Lore</option>
+      <option>Alien Monsters</option>
+      <option>Legend of Japan</option>
+      <option>Renowned Warriors</option>
+      <option>Future Fighters</option>
+      <option>Berserk</option>
+      <option>Galatic Fantasy</option>
+      <option>Divine Creatures</option>
+      <option>Heroic Legends</option>
+    </select>
+
+    <select>
+      <option>All Classes</option>
+      <option>Fighter</option>
+      <option>Assassin</option>
+      <option>Mage</option>
+      <option>Warlock</option>
+      <option>Tank</option>
+      <option>Archer</option>
+      <option>Swordfighter</option>
+      <option>Cleric</option>
+      <option>Dancer</option>
+      <option>Inventor</option>
+    </select> -->
+
+
+    <section class="heroes-selection-area">
+
+      <div id="heroesSelected" class="heroes-area heroes-selected">
+      </div>
+
+      <div id="heroesSelecting" class="heroes-area heroes-selecting">
+
+        <div class="hero" data-team="eastern-lore" data-class="tank">
+          <div class="hero-name quality"><span class="quality-1">Raker</span></div>
+          <div class="hero-team">EASTERN LORE</div>
+          <div class="hero-class">Tank</div>
+          <div class="hero-price">1</div>
+          <div class="action">+</div>
+        </div>
+
+        <div class="hero" data-team="eastern-lore" data-class="assassin">
+          <div class="hero-name quality"><span class="quality-2">Nezha</span></div>
+          <div class="hero-team">EASTERN LORE</div>
+          <div class="hero-class">Assassin</div>
+          <div class="hero-price">2</div>
+          <div class="action">+</div>
+        </div>
+
+        <div class="hero" data-team="eastern-lore" data-class="fighter">
+          <div class="hero-name quality"><span class="quality-4">Sun Wukong</span></div>
+          <div class="hero-team">EASTERN LORE</div>
+          <div class="hero-class">Fighter</div>
+          <div class="hero-price">4</div>
+          <div class="action">+</div>
+        </div>
+
+        <div class="hero" data-team="eastern-lore" data-class="cleric">
+          <div class="hero-name quality"><span class="quality-5">Celestius</span></div>
+          <div class="hero-team">EASTERN LORE</div>
+          <div class="hero-class">Cleric</div>
+          <div class="hero-price">5</div>
+        </div>
+
+
+        <div class="hero" data-team="mech-life" data-class="sword-fighter">
+          <div class="hero-name quality"><span class="quality-1">Four Poisoner</span></div>
+          <div class="hero-team">MECH LIFE</div>
+          <div class="hero-class">Swordfighter</div>
+          <div class="hero-price">1</div>
+        </div>
+
+        <div class="hero" data-team="mech-life" data-class="fighter">
+          <div class="hero-name quality"><span class="quality-1">Mecha of Annihiliation</span></div>
+          <div class="hero-team">MECH LIFE</div>
+          <div class="hero-class">Fighter</div>
+          <div class="hero-price">1</div>
+        </div>
+
+        <div class="hero" data-team="mech-life" data-class="tank">
+          <div class="hero-name quality"><span class="quality-2">Draconic Cybrog</span></div>
+          <div class="hero-team">MECH LIFE</div>
+          <div class="hero-class">Tank</div>
+          <div class="hero-price">2</div>
+        </div>
+
+        <div class="hero" data-team="mech-life" data-class="inventor">
+          <div class="hero-name quality"><span class="quality-3">E-stein</span></div>
+          <div class="hero-team">MECH LIFE</div>
+          <div class="hero-class">Inventor</div>
+          <div class="hero-price">3</div>
+        </div>
+
+        <div class="hero" data-team="mech-life" data-class="archer">
+          <div class="hero-name quality"><span class="quality-3">Android Warrior</span></div>
+          <div class="hero-team">MECH LIFE</div>
+          <div class="hero-class">Archer</div>
+          <div class="hero-price">3</div>
+        </div>
+
+        <div class="hero" data-team="mech-life" data-class="warlock">
+          <div class="hero-name quality"><span class="quality-5">Electros</span></div>
+          <div class="hero-team">MECH LIFE</div>
+          <div class="hero-class">Warlock</div>
+          <div class="hero-price">5</div>
+        </div>
+
+
+        <div class="hero" data-team="elf-kingdom" data-class="warlock">
+          <div class="hero-name quality"><span class="quality-1">Bloody Butterfly</span></div>
+          <div class="hero-team">ELF KINGDOM</div>
+          <div class="hero-class">Warlock</div>
+          <div class="hero-price">1</div>
+        </div>
+
+        <div class="hero" data-team="elf-kingdom" data-class="archer">
+          <div class="hero-name quality"><span class="quality-2">Twilight Ranger</span></div>
+          <div class="hero-team">ELF KINGDOM</div>
+          <div class="hero-class">Archer</div>
+          <div class="hero-price">2</div>
+        </div>
+
+        <div class="hero" data-team="elf-kingdom" data-class="mage">
+          <div class="hero-name quality"><span class="quality-2">Redhead Ranger</span></div>
+          <div class="hero-team">ELF KINGDOM</div>
+          <div class="hero-class">Mage</div>
+          <div class="hero-price">2</div>
+        </div>
+
+        <div class="hero" data-team="elf-kingdom" data-class="assassin">
+          <div class="hero-name quality"><span class="quality-3">Verdant Illusion</span></div>
+          <div class="hero-team">ELF KINGDOM</div>
+          <div class="hero-class">Assassin</div>
+          <div class="hero-price">3</div>
+        </div>
+
+
+        <div class="hero" data-team="western-lore" data-class="fighter">
+          <div class="hero-name quality"><span class="quality-1">Leonidas</span></div>
+          <div class="hero-team">WESTERN LORE</div>
+          <div class="hero-class">Fighter</div>
+          <div class="hero-price">1</div>
+        </div>
+
+        <div class="hero" data-team="western-lore" data-class="fighter">
+          <div class="hero-name quality"><span class="quality-2">Ares</span></div>
+          <div class="hero-team">WESTERN LORE</div>
+          <div class="hero-class">Fighter</div>
+          <div class="hero-price">2</div>
+        </div>
+
+        <div class="hero" data-team="western-lore" data-class="mage">
+          <div class="hero-name quality"><span class="quality-2">Pandora</span></div>
+          <div class="hero-team">WESTERN LORE</div>
+          <div class="hero-class">Mage</div>
+          <div class="hero-price">2</div>
+        </div>
+
+        <div class="hero" data-team="western-lore" data-class="warlock">
+          <div class="hero-name quality"><span class="quality-3">Poseidon</span></div>
+          <div class="hero-team">WESTERN LORE</div>
+          <div class="hero-class">Warlock</div>
+          <div class="hero-price">3</div>
+        </div>
+
+        <div class="hero" data-team="western-lore" data-class="cleric">
+          <div class="hero-name quality"><span class="quality-3">Athena</span></div>
+          <div class="hero-team">WESTERN LORE</div>
+          <div class="hero-class">Cleric</div>
+          <div class="hero-price">3</div>
+        </div>
+
+        <div class="hero" data-team="western-lore" data-class="cleric">
+          <div class="hero-name quality"><span class="quality-5">Zeus</span></div>
+          <div class="hero-team">WESTERN LORE</div>
+          <div class="hero-class">Cleric</div>
+          <div class="hero-price">5</div>
+        </div>
+
+
+        <div class="hero" data-team="alien-monsters" data-class="warlock">
+          <div class="hero-name quality"><span class="quality-1">Ancestral Honor</span></div>
+          <div class="hero-team">ALIEN MONSTERS</div>
+          <div class="hero-class">Warlock</div>
+          <div class="hero-price">1</div>
+        </div>
+
+        <div class="hero" data-team="alien-monsters" data-class="dancer">
+          <div class="hero-name quality"><span class="quality-1">Samba Boss</span></div>
+          <div class="hero-team">ALIEN MONSTERS</div>
+          <div class="hero-class">Dancer</div>
+          <div class="hero-price">1</div>
+        </div>
+
+        <div class="hero" data-team="alien-monsters" data-class="tank">
+          <div class="hero-name quality"><span class="quality-3">Electroblast</span></div>
+          <div class="hero-team">ALIEN MONSTERS</div>
+          <div class="hero-class">Tank</div>
+          <div class="hero-price">3</div>
+        </div>
+
+        <div class="hero" data-team="alien-monsters" data-class="cleric">
+          <div class="hero-name quality"><span class="quality-4">Zed</span></div>
+          <div class="hero-team">ALIEN MONSTERS</div>
+          <div class="hero-class">Cleric</div>
+          <div class="hero-price">4</div>
+        </div>
+
+
+        <div class="hero" data-team="legends-of-japan" data-class="dancer">
+          <div class="hero-name quality"><span class="quality-1">Fire Dancer</span></div>
+          <div class="hero-team">LEGENDS OF JAPAN</div>
+          <div class="hero-class">Dancer</div>
+          <div class="hero-price">1</div>
+        </div>
+
+        <div class="hero" data-team="legends-of-japan" data-class="warlock">
+          <div class="hero-name quality"><span class="quality-2">Crimson Emissary</span></div>
+          <div class="hero-team">LEGENDS OF JAPAN</div>
+          <div class="hero-class">Warlock</div>
+          <div class="hero-price">2</div>
+        </div>
+
+        <div class="hero" data-team="legends-of-japan" data-class="sword-fighter">
+          <div class="hero-name quality"><span class="quality-3">Samurai Frenzy</span></div>
+          <div class="hero-team">LEGENDS OF JAPAN</div>
+          <div class="hero-class">Swordfighter</div>
+          <div class="hero-price">3</div>
+        </div>
+
+        <div class="hero" data-team="legends-of-japan" data-class="assassin">
+          <div class="hero-name quality"><span class="quality-4">Hattori</span></div>
+          <div class="hero-team">LEGENDS OF JAPAN</div>
+          <div class="hero-class">Assassin</div>
+          <div class="hero-price">4</div>
+        </div>
+
+
+        <div class="hero" data-team="renowned-warriors" data-class="assassin">
+          <div class="hero-name quality"><span class="quality-2">Zhao Yun</span></div>
+          <div class="hero-team">RENOWEND WARRIOR</div>
+          <div class="hero-class">Assassin</div>
+          <div class="hero-price">2</div>
+        </div>
+
+        <div class="hero" data-team="renowned-warriors" data-class="tank">
+          <div class="hero-name quality"><span class="quality-3">Zhang Fei</span></div>
+          <div class="hero-team">RENOWEND WARRIOR</div>
+          <div class="hero-class">Tank</div>
+          <div class="hero-price">3</div>
+        </div>
+
+        <div class="hero" data-team="renowned-warriors" data-class="inventor">
+          <div class="hero-name quality"><span class="quality-4">Damacus</span></div>
+          <div class="hero-team">RENOWEND WARRIOR</div>
+          <div class="hero-class">Inventor</div>
+          <div class="hero-price">4</div>
+        </div>
+
+        <div class="hero" data-team="renowned-warriors" data-class="mage">
+          <div class="hero-name quality"><span class="quality-4">Absalon</span></div>
+          <div class="hero-team">RENOWEND WARRIOR</div>
+          <div class="hero-class">Mage</div>
+          <div class="hero-price">4</div>
+        </div>
+
+        <div class="hero" data-team="renowned-warriors" data-class="fighter">
+          <div class="hero-name quality"><span class="quality-4">Lu Bu</span></div>
+          <div class="hero-team">RENOWEND WARRIOR</div>
+          <div class="hero-class">Fighter</div>
+          <div class="hero-price">4</div>
+        </div>
+
+
+        <div class="hero" data-team="future-fighters" data-class="inventor">
+          <div class="hero-name quality"><span class="quality-1">Magnetic Time</span></div>
+          <div class="hero-team">FUTURE FIGHTERS</div>
+          <div class="hero-class">Inventor</div>
+          <div class="hero-price">1</div>
+        </div>
+
+        <div class="hero" data-team="future-fighters" data-class="archer">
+          <div class="hero-name quality"><span class="quality-3">Dubb Blast</span></div>
+          <div class="hero-team">FUTURE FIGHTERS</div>
+          <div class="hero-class">Archer</div>
+          <div class="hero-price">3</div>
+        </div>
+
+        <div class="hero" data-team="future-fighters" data-class="dancer">
+          <div class="hero-name quality"><span class="quality-4">Digital Love</span></div>
+          <div class="hero-team">FUTURE FIGHTERS</div>
+          <div class="hero-class">Dancer</div>
+          <div class="hero-price">4</div>
+        </div>
+
+        <div class="hero" data-team="future-fighters" data-class="archer">
+          <div class="hero-name quality"><span class="quality-4">Futuristic Marksman</span></div>
+          <div class="hero-team">FUTURE FIGHTERS</div>
+          <div class="hero-class">Archer</div>
+          <div class="hero-price">4</div>
+        </div>
+
+        <div class="hero" data-team="future-fighters" data-class="cleric">
+          <div class="hero-name quality"><span class="quality-5">Pengwing</span></div>
+          <div class="hero-team">FUTURE FIGHTERS</div>
+          <div class="hero-class">Cleric</div>
+          <div class="hero-price">5</div>
+        </div>
+
+
+        <div class="hero" data-team="berserk" data-class="assassin">
+          <div class="hero-name quality"><span class="quality-1">Shadowed Arachnid</span></div>
+          <div class="hero-team">BERSERK</div>
+          <div class="hero-class">Assassin</div>
+          <div class="hero-price">1</div>
+        </div>
+
+        <div class="hero" data-team="berserk" data-class="inventor">
+          <div class="hero-name quality"><span class="quality-2">Toxic Giant</span></div>
+          <div class="hero-team">BERSERK</div>
+          <div class="hero-class">Inventor</div>
+          <div class="hero-price">2</div>
+        </div>
+
+        <div class="hero" data-team="berserk" data-class="tank">
+          <div class="hero-name quality"><span class="quality-4">Grom</span></div>
+          <div class="hero-team">BERSERK</div>
+          <div class="hero-class">Tank</div>
+          <div class="hero-price">4</div>
+        </div>
+
+        <div class="hero" data-team="berserk" data-class="warlock">
+          <div class="hero-name quality"><span class="quality-5">Phosphoric Fire</span></div>
+          <div class="hero-team">BERSERK</div>
+          <div class="hero-class">Warlock</div>
+          <div class="hero-price">5</div>
+        </div>
+
+
+        <div class="hero" data-team="galactic-fantasy" data-class="mage">
+          <div class="hero-name quality"><span class="quality-1">Missy Stardust</span></div>
+          <div class="hero-team">GALATIC FANTASY</div>
+          <div class="hero-class">Mage</div>
+          <div class="hero-price">1</div>
+        </div>
+
+        <div class="hero" data-team="galactic-fantasy" data-class="assassin">
+          <div class="hero-name quality"><span class="quality-2">Lady of the Lance</span></div>
+          <div class="hero-team">GALATIC FANTASY</div>
+          <div class="hero-class">Assassin</div>
+          <div class="hero-price">2</div>
+        </div>
+
+        <div class="hero" data-team="galactic-fantasy" data-class="fighter">
+          <div class="hero-name quality"><span class="quality-3">Red Riding Wolf</span></div>
+          <div class="hero-team">GALATIC FANTASY</div>
+          <div class="hero-class">Fighter</div>
+          <div class="hero-price">3</div>
+        </div>
+
+        <div class="hero" data-team="galactic-fantasy" data-class="mage">
+          <div class="hero-name quality"><span class="quality-5">Una</span></div>
+          <div class="hero-team">GALATIC FANTASY</div>
+          <div class="hero-class">Mage</div>
+          <div class="hero-price">5</div>
+        </div>
+
+
+        <div class="hero" data-team="divine-creatures" data-class="tank">
+          <div class="hero-name quality"><span class="quality-2">Tortoise</span></div>
+          <div class="hero-team">DIVINE CREATURES</div>
+          <div class="hero-class">Tank</div>
+          <div class="hero-price">2</div>
+        </div>
+
+        <div class="hero" data-team="divine-creatures" data-class="fighter">
+          <div class="hero-name quality"><span class="quality-2">BomBom</span></div>
+          <div class="hero-team">DIVINE CREATURES</div>
+          <div class="hero-class">Fighter</div>
+          <div class="hero-price">2</div>
+        </div>
+
+        <div class="hero" data-team="divine-creatures" data-class="mage">
+          <div class="hero-name quality"><span class="quality-3">Bunny New year</span></div>
+          <div class="hero-team">DIVINE CREATURES</div>
+          <div class="hero-class">Mage</div>
+          <div class="hero-price">3</div>
+        </div>
+
+        <div class="hero" data-team="divine-creatures" data-class="dancer">
+          <div class="hero-name quality"><span class="quality-5">Lion Dance</span></div>
+          <div class="hero-team">DIVINE CREATURES</div>
+          <div class="hero-class">Dancer</div>
+          <div class="hero-price">5</div>
+        </div>
+
+
+        <div class="hero" data-team="heroic-legends" data-class="sword-fighter">
+          <div class="hero-name quality"><span class="quality-2">Mulan</span></div>
+          <div class="hero-team">HEROIC LEGENDS</div>
+          <div class="hero-class">Swordfighter</div>
+          <div class="hero-price">2</div>
+        </div>
+
+        <div class="hero" data-team="heroic-legends" data-class="assassin">
+          <div class="hero-name quality"><span class="quality-3">Mikio</span></div>
+          <div class="hero-team">HEROIC LEGENDS</div>
+          <div class="hero-class">Assassin</div>
+          <div class="hero-price">3</div>
+        </div>
+
+        <div class="hero" data-team="heroic-legends" data-class="fighter">
+          <div class="hero-name quality"><span class="quality-4">Bruce Lee</span></div>
+          <div class="hero-team">HEROIC LEGENDS</div>
+          <div class="hero-class">Fighter</div>
+          <div class="hero-price">4</div>
+        </div>
+
+        <div class="hero" data-team="heroic-legends" data-class="sword-fighter">
+          <div class="hero-name quality"><span class="quality-5">Estrath</span></div>
+          <div class="hero-team">HEROIC LEGENDS</div>
+          <div class="hero-class">Swordfighter</div>
+          <div class="hero-price">5</div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section class="combo-gallery">
+      <div class="active-team-buff">
+        <h3>Buff Team</h3>
+        <div class="selected-heroes-buff selected-heroes-buff-team"></div>
+
+        <h3>Buff Class</h3>
+        <div class="selected-heroes-buff selected-heroes-buff-class"></div>
+      </div>
+
+      <div class="combo-container">
+
+        <div class="combo-team">
+          <h3>Team</h3>
+
+          <div class="buff buff-attack" data-buff="team" data-buff-type="attack" data-buff-all>
+            <div class="buff-team"><span>EASTERN LORE</span></div>
+            <div class="buff-description">2: +15% Attack Damage for all allies</div>
+            <div class="buff-description">4: +15% Attack Damage for all allies</div>
+          </div>
+
+          <div class="buff buff-attack" data-buff="team" data-buff-type="attack" data-buff-all>
+            <div class="buff-team"><span>LEGENDS OF JAPAN</span></div>
+            <div class="buff-description">2: +25 Attack Speed for all Legend of Japan</div>
+            <div class="buff-description">4: +25 Attack Speed for all allies</div>
+          </div>
+
+          <div class="buff buff-attack" data-buff="team" data-buff-type="attack">
+            <div class="buff-team"><span>BERSERK</span></div>
+            <div class="buff-description">2: Deal 20 damage per second</div>
+            <div class="buff-description">4: Deal 20 damage per second</div>
+          </div>
+
+          <div class="buff buff-attack" data-buff="team" data-buff-type="attack" data-buff-all>
+            <div class="buff-team"><span>HEROIC LEGENDS</span></div>
+            <div class="buff-description">2: -5 Armor to all enemy</div>
+            <div class="buff-description">4: -7 Armor to all enemy</div>
+          </div>
+
+
+          <div class="buff buff-defend" data-buff="team" data-buff-type="defend">
+            <div class="buff-team"><span>ELF KINGDOM</span></div>
+            <div class="buff-description">2: 30% Dodge attacks</div>
+            <div class="buff-description">4: 30% Dodge attacks</div>
+          </div>
+
+          <div class="buff buff-defend" data-buff="team" data-buff-type="defend">
+            <div class="buff-team"><span>ALIEN MONSTER</span></div>
+            <div class="buff-description">2: +300 Max health</div>
+            <div class="buff-description">4: +500 Max health</div>
+          </div>
+
+          <div class="buff buff-defend" data-buff="team" data-buff-type="defend" data-buff-all>
+            <div class="buff-team"><span>GALATIC FANTASY</span></div>
+            <div class="buff-description">2: +20 Spell Resist for all allies</div>
+            <div class="buff-description">4: +30 Spell Resist for all allies</div>
+          </div>
+
+          <div class="buff buff-defend" data-buff="team" data-buff-type="defend" data-buff-all>
+            <div class="buff-team"><span>MECH LIFE</span></div>
+            <div class="buff-description">2: +15 Armor and +10 Health Rege for a random ally</div>
+            <div class="buff-description">6: +15 Armor and +10 Health Rege for all allies</div>
+          </div>
+
+
+          <div class="buff buff-effect" data-buff="team" data-buff-type="effect">
+            <div class="buff-team"><span>WESTERN LORE</span></div>
+            <div class="buff-description">2: 20% Chance to Silence for 4 seconds</div>
+            <div class="buff-description">4: 20% Chance to Silence for 4 seconds</div>
+            <div class="buff-description">6: 20% Chance to Silence for 4 seconds</div>
+          </div>
+
+          <div class="buff buff-effect" data-buff="team" data-buff-type="effect">
+            <div class="buff-team"><span>RENOWNED WARRIORS</span></div>
+            <div class="buff-description">2: 10% Chance to stun for 2 seconds</div>
+            <div class="buff-description">4: 10% Chance to stun for 2 seconds</div>
+          </div>
+
+          <div class="buff buff-effect" data-buff="team" data-buff-type="effect">
+            <div class="buff-team"><span>FUTURE FIGHTERS</span></div>
+            <div class="buff-description">2: +30% Skill CD</div>
+            <div class="buff-description">4: +30% Skill CD</div>
+          </div>
+
+          <div class="buff buff-effect" data-buff="team" data-buff-type="effect">
+            <div class="buff-team"><span>DIVINE CREATURES</span></div>
+            <div class="buff-description">2: 30% Chance to stun enemy for 4 seconds</div>
+            <div class="buff-description">4: 30% Chance to stun enemy for 4 seconds</div>
+          </div>
+
+        </div>
+
+        <div class="combo-class">
+          <h3>Class</h3>
+
+          <div class="buff buff-attack" data-buff="class" data-buff-type="attack">
+            <div class="buff-class"><span>Cleric</span></div>
+            <div class="buff-description">1: +30% skill damage for one deity on scene</div>
+          </div>
+
+          <div class="buff buff-attack" data-buff="class" data-buff-type="attack">
+            <div class="buff-class"><span>Archer</span></div>
+            <div class="buff-description">2: +30% Attack Damage for archers</div>
+            <div class="buff-description">4: Archer's Attack Damage +30%</div>
+          </div>
+
+          <div class="buff buff-attack" data-buff="class" data-buff-type="attack">
+            <div class="buff-class"><span>Swordfighter</span></div>
+            <div class="buff-description">2: 50% damage ignores armor</div>
+            <div class="buff-description">4: 50% damage ignores armor</div>
+          </div>
+
+          <div class="buff buff-attack" data-buff="class" data-buff-type="attack">
+            <div class="buff-class"><span>Assassin</span></div>
+            <div class="buff-description">3: 12% Chance for 3x damage</div>
+            <div class="buff-description">6: 12% Chance for 4x damage</div>
+          </div>
+
+
+          <div class="buff buff-defend" data-buff="class" data-buff-type="defend">
+            <div class="buff-class"><span>Tank</span></div>
+            <div class="buff-description">2: Damage reduction shield after taking 1 attacks</div>
+            <div class="buff-description">4: Damage reduction shield after taking 1 attacks</div>
+            <div class="buff-description">6: Damage reduction shield after taking 1 attacks</div>
+          </div>
+
+          <div class="buff buff-defend" data-buff="class" data-buff-type="defend">
+            <div class="buff-class"><span>Dancer</span></div>
+            <div class="buff-description">2: -15% Attack Speed for one enemy</div>
+            <div class="buff-description">4: -15% Attack Speed for one enemy</div>
+          </div>
+
+          <div class="buff buff-defend" data-buff="class" data-buff-type="defend">
+            <div class="buff-class"><span>Fighter</span></div>
+            <div class="buff-description">3: +5 Armor</div>
+            <div class="buff-description">6: +7 Armor</div>
+          </div>
+
+
+          <div class="buff buff-effect" data-buff="class" data-buff-type="effect">
+            <div class="buff-class"><span>Inventor</span></div>
+            <div class="buff-description">2: Two 1-star merge to become 2-star</div>
+            <div class="buff-description">4: Two 2-star merge to become 3-star</div>
+          </div>
+
+          <div class="buff buff-effect" data-buff="class" data-buff-type="effect">
+            <div class="buff-class"><span>Mage</span></div>
+            <div class="buff-description">3: Reduce spell resist and deal 40 magic damage</div>
+            <div class="buff-description">6: Reduce spell resist and deal 40 magic damage</div>
+          </div>
+
+          <div class="buff buff-effect" data-buff="class" data-buff-type="effect">
+            <div class="buff-class"><span>Warlock</span></div>
+            <div class="buff-description">3: 20% Life Steal</div>
+            <div class="buff-description">6: 30% Life Steal</div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <script>
+
+
+    const selectedHeroesBuffTeam = document.querySelector('.selected-heroes-buff-team');
+    const selectedHeroesBuffClass = document.querySelector('.selected-heroes-buff-class');
+
+    function heroesBuff() {
+      // Get all teams
+      const heroesSelected = document.getElementById('heroesSelected');
+      const easternLore = heroesSelected.querySelectorAll('.hero[data-team="eastern-lore"]');
+      const mechLife = heroesSelected.querySelectorAll('.hero[data-team="mech-life"]');
+      const elfKingdom = heroesSelected.querySelectorAll('.hero[data-team="elf-kingdom"]');
+      const westernLore = heroesSelected.querySelectorAll('.hero[data-team="western-lore"]');
+      const alienMonsters = heroesSelected.querySelectorAll('.hero[data-team="alien-monsters"]');
+      const legendsOfJapan = heroesSelected.querySelectorAll('.hero[data-team="legends-of-japan"]');
+      const renownedWarriors = heroesSelected.querySelectorAll('.hero[data-team="renowned-warriors"]');
+      const futureFighters = heroesSelected.querySelectorAll('.hero[data-team="future-fighters"]');
+      const berserk = heroesSelected.querySelectorAll('.hero[data-team="berserk"]');
+      const galacticFantasy = heroesSelected.querySelectorAll('.hero[data-team="galactic-fantasy"]');
+      const divineCreatures = heroesSelected.querySelectorAll('.hero[data-team="divine-creatures"]');
+      const heroicLegends = heroesSelected.querySelectorAll('.hero[data-team="heroic-legends"]');
+
+      // Get all Classes
+      const fighter = heroesSelected.querySelectorAll('.hero[data-class="fighter"]');
+      const assassin = heroesSelected.querySelectorAll('.hero[data-class="assassin"]');
+      const mage = heroesSelected.querySelectorAll('.hero[data-class="mage"]');
+      const warlock = heroesSelected.querySelectorAll('.hero[data-class="warlock"]');
+      const tank = heroesSelected.querySelectorAll('.hero[data-class="tank"]');
+      const archer = heroesSelected.querySelectorAll('.hero[data-class="archer"]');
+      const swordFighter = heroesSelected.querySelectorAll('.hero[data-class="sword-fighter"]');
+      const cleric = heroesSelected.querySelectorAll('.hero[data-class="cleric"]');
+      const dancer = heroesSelected.querySelectorAll('.hero[data-class="dancer"]');
+      const inventor = heroesSelected.querySelectorAll('.hero[data-class="inventor"]');
+
+      // console.clear();
+      // console.log(
+      //   'Total Teams \n' +
+      //   'Berserk: ' + berserk.length + '\n' +
+      //   'Eastern Lore: ' + easternLore.length + '\n\n' +
+
+      //   'Total Classes \n' +
+      //   'Fighter: ' + fighter.length + '\n' +
+      //   'Assassin: ' + assassin.length + '\n' +
+      //   'Warlock: ' + warlock.length + '\n' +
+      //   'Tank: ' + tank.length + '\n' +
+      //   'Cleric: ' + cleric.length + '\n' +
+      //   'Inventor: ' + inventor.length + '\n\n'
+      // );
+
+      var
+        buffTeam1 = '',
+        buffTeam2 = '',
+        buffTeam3 = '',
+        buffTeam4 = '',
+        buffTeam5 = '',
+        buffTeam6 = '',
+        buffTeam7 = '',
+        buffTeam8 = '',
+        buffTeam9 = '',
+        buffTeam10 = '',
+        buffTeam11 = '',
+        buffTeam12 = '',
+        buffClass1 = '',
+        buffClass2 = '',
+        buffClass3 = '',
+        buffClass4 = '',
+        buffClass5 = '',
+        buffClass6 = '',
+        buffClass7 = '',
+        buffClass8 = '',
+        buffClass9 = '',
+        buffClass10 = '';
+
+      // Buff for Teams
+      if (easternLore.length == 4) {
+        buffTeam1 = 'EASTERN LORE 2: 15% Attack Damage for all allies <br> EASTERN LORE 4: +15% Attack Damage for all allies <br>';
+      } else if (easternLore.length >= 2) {
+        buffTeam1 = 'EASTERN LORE 2: 15% Attack Damage for all allies <br>';
+      }
+
+      if (legendsOfJapan.length == 4) {
+        buffTeam2 = 'LEGENDS OF JAPAN 2: +25 Attack Speed for all Legend of Japan <br> LEGENDS OF JAPAN 4: +25 Attack Speed for all allies <br>';
+      } else if (legendsOfJapan.length >= 2) {
+        buffTeam2 = 'LEGENDS OF JAPAN 2: +25 Attack Speed for all Legend of Japan <br>';
+      }
+
+      if (berserk.length == 4) {
+        buffTeam3 = 'BERSERK 2: Deal 20 damage per second <br> BERSERK 4: Deal 20 damage per second <br>';
+      } else if (berserk.length >= 2) {
+        buffTeam3 = 'BERSERK 2: Deal 20 damage per second <br>';
+      }
+
+      if (heroicLegends.length == 4) {
+        buffTeam4 = 'HEROIC LEGENDS 2: -5 Armor to all enemy <br> HEROIC LEGENDS 4: -7 Armor to all enemy <br>';
+      } else if (heroicLegends.length >= 2) {
+        buffTeam4 = 'HEROIC LEGENDS 2: -5 Armor to all enemy <br>';
+      }
+
+      if (elfKingdom.length == 4) {
+        buffTeam5 = 'ELF KINGDOM 2: 30% Dodge attacks <br> ELF KINGDOM 4: 30% Dodge attacks <br>';
+      } else if (elfKingdom.length >= 2) {
+        buffTeam5 = 'ELF KINGDOM 2: 30% Dodge attacks <br>';
+      }
+
+      if (alienMonsters.length == 4) {
+        buffTeam6 = 'ALIEN MONSTER 2: +300 Max health <br> ALIEN MONSTER 4: +500 Max health <br>';
+      } else if (alienMonsters.length >= 2) {
+        buffTeam6 = 'ALIEN MONSTER 2: +300 Max health <br>';
+      }
+
+      if (galacticFantasy.length == 4) {
+        buffTeam7 = 'GALATIC FANTASY 2: +20 Spell Resist for all allies <br> GALATIC FANTASY 4: +30 Spell Resist for all allies <br>';
+      } else if (galacticFantasy.length >= 2) {
+        buffTeam7 = 'GALATIC FANTASY 2: +20 Spell Resist for all allies <br>';
+      }
+
+      if (mechLife.length == 6) {
+        buffTeam8 = 'MECH LIFE 3: +15 Armor and +10 Health Rege for a random ally <br> MECH LIFE 6: +15 Armor and +10 Health Rege for all allies <br>';
+      } else if (mechLife.length >= 3) {
+        buffTeam8 = 'MECH LIFE 3: +15 Armor and +10 Health Rege for a random ally <br>';
+      }
+
+      if (westernLore.length == 6) {
+        buffTeam9 = 'WESTERN LORE 2: 20% Chance to Silence for 4 seconds <br> WESTERN LORE 4: 20% Chance to Silence for 4 seconds <br> WESTERN LORE 6: 20% Chance to Silence for 4 seconds <br>';
+      } else if (westernLore.length >= 4) {
+        buffTeam9 = 'WESTERN LORE 2: 20% Chance to Silence for 4 seconds <br> WESTERN LORE 4: 20% Chance to Silence for 4 seconds <br>';
+      } else if (westernLore.length >= 2) {
+        buffTeam9 = 'WESTERN LORE 2: 20% Chance to Silence for 4 seconds <br>';
+      }
+
+      if (renownedWarriors.length == 4) {
+        buffTeam10 = 'RENOWNED WARRIORS 2: 10% Chance to stun for 2 seconds <br> RENOWNED WARRIORS 4: 10% Chance to stun for 2 seconds <br>';
+      } else if (renownedWarriors.length >= 2) {
+        buffTeam10 = 'RENOWNED WARRIORS 2: 10% Chance to stun for 2 seconds <br>';
+      }
+
+      if (futureFighters.length == 4) {
+        buffTeam11 = 'FUTURE FIGHTERS 2: +30% Skill CD <br> FUTURE FIGHTERS 4: +30% Skill CD <br>';
+      } else if (futureFighters.length >= 2) {
+        buffTeam11 = 'FUTURE FIGHTERS 2: +30% Skill CD <br>';
+      }
+
+      if (divineCreatures.length == 4) {
+        buffTeam12 = 'DIVINE CREATURES 2: 30% Chance to stun enemy for 4 seconds <br> DIVINE CREATURES 4: 30% Chance to stun enemy for 4 seconds <br>';
+      } else if (divineCreatures.length >= 2) {
+        buffTeam12 = 'DIVINE CREATURES 2: 30% Chance to stun enemy for 4 seconds <br>';
+      }
+
+
+      // Buff for Classes
+      if (cleric.length == 1) {
+        buffClass1 = 'Cleric 1: +30% skill damage for one deity on scene <br>';
+      }
+
+      if (archer.length == 4) {
+        buffClass2 = 'Archer 2: +30% Attack Damage for archers <br> Archer 4: Archer\'s Attack Damage +30% <br>';
+      } else if (archer.length >= 2) {
+        buffClass2 = 'Archer 2: +30% Attack Damage for archers <br>';
+      }
+
+      if (swordFighter.length == 4) {
+        buffClass3 = 'Swordfighter 2: 50% damage ignores armor <br> Swordfighter 4: 50% damage ignores armor <br>';
+      } else if (swordFighter.length >= 2) {
+        buffClass3 = 'Swordfighter 2: 50% damage ignores armor <br>';
+      }
+
+      if (assassin.length == 6) {
+        buffClass4 = 'Assassin 6: 12% Chance for 3x damage <br> Assassin 6: 12% Chance for 4x damage <br>';
+      } else if (assassin.length >= 3) {
+        buffClass4 = 'Assassin 3: 12% Chance for 3x damage <br>';
+      }
+
+      if (tank.length == 6) {
+        buffClass5 = 'Tank 2: Damage reduction shield after taking 1 attacks <br> Tank 4: Damage reduction shield after taking 1 attacks <br> Tank 6: Damage reduction shield after taking 1 attacks <br>';
+      } else if (tank.length >= 4) {
+        buffClass5 = 'Tank 2: Damage reduction shield after taking 1 attacks <br> Tank 4: Damage reduction shield after taking 1 attacks <br>';
+      } else if (tank.length >= 2) {
+        buffClass5 = 'Tank 2: Damage reduction shield after taking 1 attacks <br>';
+      }
+
+      if (dancer.length == 4) {
+        buffClass6 = 'Dancer 2: -15% Attack Speed for one enemy <br> Dancer 4: -15% Attack Speed for one enemy <br>';
+      } else if (dancer.length >= 2) {
+        buffClass6 = 'Dancer 2: -15% Attack Speed for one enemy <br>';
+      }
+
+      if (fighter.length == 6) {
+        buffClass7 = 'Fighter 6: +5 Armor <br> Fighter 4: +7 Armor <br>';
+      } else if (fighter.length >= 3) {
+        buffClass7 = 'Fighter 3: +5 Armor <br>';
+      }
+
+      if (inventor.length == 4) {
+        buffClass8 = 'Inventor 2: Two 1-star merge to become 2-star <br> Inventor 4: Two 2-star merge to become 3-star <br>';
+      } else if (inventor.length >= 2) {
+        buffClass8 = 'Inventor 2: Two 1-star merge to become 2-star <br>';
+      }
+
+      if (mage.length == 6) {
+        buffClass9 = 'Mage 3: Reduce spell resist and deal 40 magic damage <br> Mage 6: Reduce spell resist and deal 40 magic damage <br>';
+      } else if (mage.length >= 3) {
+        buffClass9 = 'Mage 3: Reduce spell resist and deal 40 magic damage <br>';
+      }
+
+      if (warlock.length == 6) {
+        buffClass10 = 'Warlock 3: 20% Life Steal <br> Warlock 6: 30% Life Steal <br>';
+      } else if (warlock.length >= 3) {
+        buffClass10 = 'Warlock 3: 20% Life Steal <br>';
+      }
+
+      selectedHeroesBuffTeam.innerHTML = buffTeam1 + buffTeam2 + buffTeam3 + buffTeam4 + buffTeam5 + buffTeam6 + buffTeam7 + buffTeam8 + buffTeam9 + buffTeam10 + buffTeam11 + buffTeam12;
+      selectedHeroesBuffClass.innerHTML = buffClass1 + buffClass2 + buffClass3 + buffClass4 + buffClass5 + buffClass6 + buffClass7 + buffClass8 + buffClass9 + buffClass10;
+    }
+
+    const heroesSelecting = document.getElementById('heroesSelecting');
+
+    function heroClicked(e) {
+      const totalHeroesSelected = heroesSelected.querySelectorAll('.hero');
+      console.log(e);
+      console.log(this);
+      console.log(e.target.parentNode);
+
+      // Get the .hero
+      // console.log(e.target.parentNode);
+
+      // Get the main container if it's a selecting heroes or selected heroes
+      // console.log(e.target.parentNode.parentNode);
+
+      if (e.target.parentNode.parentNode.id == 'heroesSelected') {
+        heroesSelecting.appendChild(e.target.parentNode);
+      } else {
+
+        if (totalHeroesSelected.length == 8) return;
+        heroesSelected.appendChild(e.target.parentNode);
+      }
+
+      heroesBuff();
+    }
+
+    const allHeroes = document.querySelectorAll('.action');
+    allHeroes.forEach(function (e) {
+      e.addEventListener("click", heroClicked);
+    });
+
+
+
+  </script>
+
+
+</body>
+
+</html>

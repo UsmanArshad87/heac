@@ -1,0 +1,124 @@
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: white;
+  background-color: #004072; }
+
+.container {
+  width: 1400px;
+  margin: 20px auto 0; }
+
+.table {
+  border: 1px solid #ccc;
+  margin: 20px 0;
+  border-collapse: collapse;
+  min-width: 600px; }
+  .table th, .table td {
+    border: 1px solid #ccc;
+    padding: 5px 10px; }
+
+.help {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 140px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 10px; }
+
+.heroes-selection-area {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between; }
+
+.heroes-area {
+  padding: 10px;
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  max-height: 350px;
+  overflow: auto; }
+
+.heroes-selected {
+  border: 2px solid #82dd50;
+  margin-right: 20px;
+  height: 350px; }
+
+.heroes-selecting {
+  border: 2px solid #469cff;
+  margin-left: 20px; }
+
+.hero {
+  border: 1px solid #437aa0;
+  margin: 0 0 10px;
+  padding: 6px 12px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer; }
+  .hero:hover {
+    background-color: rgba(0, 0, 0, 0.3); }
+  .hero > div {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+  .hero-name {
+    -webkit-box-flex: 2 !important;
+    -ms-flex: 2 !important;
+    flex: 2 !important; }
+  .hero-team {
+    -webkit-box-flex: 2 !important;
+    -ms-flex: 2 !important;
+    flex: 2 !important; }
+  .hero-price {
+    text-align: right; }
+
+.quality-1 {
+  color: white; }
+
+.quality-2 {
+  color: #13ffff; }
+
+.quality-3 {
+  color: #ff7afb; }
+
+.quality-4 {
+  color: #ffcb0e; }
+
+.quality-5 {
+  color: #ff7600; }
+
+.buff {
+  margin: 0 0 15px; }
+
+.combo-gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .combo-gallery > div {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+
+.combo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; }
+  .combo-container > div {
+    padding: 0 10px; }
+
+.selected-heroes-buff {
+  line-height: 1.6; }
