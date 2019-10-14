@@ -10,11 +10,11 @@ I felt frustrated when I had to write too much again and again and going to game
 
 
 ### Some combos created by this tool
-- 4 buffs - Dmage per second
-- 5 buffs - defensive combo
-- 6 buffs - Attack speed & life steal
-- 6 buffs - Full hard dps
-- 6 buffs - inventor combo
+- 4 buffs - [Dmage per second](http://usmanarshad.com/heac/combos/successful/4%20Buffs%20-%20Dmage%20per%20second.jpg)
+- 5 buffs - [Defensive combo](http://usmanarshad.com/heac/combos/5%20Buffs%20-%20Defensive%20combo.jpg)
+- 6 buffs - [Attack speed & life steal](http://usmanarshad.com/heac/combos/successful/6%20Buffs%20-%20Attack%20speed%20&%20life%20steal.jpg)
+- 6 buffs - [Full hard dps](http://usmanarshad.com/heac/combos/successful/6%20Buffs%20-%20Full%20hard%20dps.jpg)
+- 6 buffs - [Inventor combo](http://usmanarshad.com/heac/combos/6%20Buffs%20-%20Inventor%20combo.jpg)
 - 8 Buffs - [Max buffs combo](http://usmanarshad.com/heac/combos/8%20Buffs%20-%20Max%20buffs%20combo.jpg)
 
 [DEMO](http://usmanarshad.com/heac/)
