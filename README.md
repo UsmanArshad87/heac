@@ -20,4 +20,4 @@ Check my in game winning strikes with the help of this combos builder [VIEW](htt
 [DEMO](http://usmanarshad.com/projects/heac/)
 
 **NOTE** Auto Chess combos builder tool is in testing version.
-> Please feel free to share your suggestion or whatever you are best in to help the projects further improvement, Thanks.
+Please feel free to share your suggestion or whatever you are best in to help the projects further improvement, Thanks.
