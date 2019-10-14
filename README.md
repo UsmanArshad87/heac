@@ -6,8 +6,6 @@
 
 I wanted to try all the possible combos so when I started making combos I write down each name of hero with their Team and Class in my google's keep note, but it was very time taking and not worthy because I've to write all time each combo with full name, tank, class and their buff, and even tracking all of them and checking the buff wasn't easy. Now with this tool I can create and check any combo within few seconds.
 
-Winning strikes with the help of this combos builder [VIEW](http://usmanarshad.com/heac/combos/winning-strikes.png)
-
 ### Some combos created by this tool
 
 - 4 buffs - [Dmage per second](http://usmanarshad.com/heac/combos/successful/4%20Buffs%20-%20Dmage%20per%20second.jpg)
@@ -16,6 +14,8 @@ Winning strikes with the help of this combos builder [VIEW](http://usmanarshad.c
 - 6 buffs - [Full hard dps](http://usmanarshad.com/heac/combos/successful/6%20Buffs%20-%20Full%20hard%20dps.jpg)
 - 6 buffs - [Inventor combo](http://usmanarshad.com/heac/combos/6%20Buffs%20-%20Inventor%20combo.jpg)
 - 8 Buffs - [Max buffs combo](http://usmanarshad.com/heac/combos/8%20Buffs%20-%20Max%20buffs%20combo.jpg)
+
+Check my in game winning strikes with the help of this combos builder [VIEW](http://usmanarshad.com/heac/combos/winning-strikes.png)
 
 [DEMO](http://usmanarshad.com/heac/)
 
