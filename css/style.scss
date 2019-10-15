@@ -155,10 +155,12 @@ body {
   }
   
   .active-team-buff {
-    margin-right: 20px;
+    order: 2;
+    margin-left: 20px;
+    margin-right: 0px !important;
   }
 
   .all-buff-list {
-    margin-left: 20px;
+    margin-right: 20px;
   }
 }
